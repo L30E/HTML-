@@ -1,0 +1,250 @@
+
+/*
+Main
+*/
+
+/*Header Section Gradient*/
+.section {
+ width: 100%;
+ position: relative;
+ padding: 0;
+ margin: 0; 
+ font-family: "Plantino", "Times New Roman", Times, Verdana;
+
+ /*Gradient code*/
+ margin: 0;
+ width: 100%;
+ height: 100vh;
+ color: #fff;
+ background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+ background-size: 400% 400%;
+ animation: gradientBG 15s ease infinite;
+}
+/*Gradient Scroll*/
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*Body*/
+.info h1{
+  position: relative;
+  top:130px;
+  left:0px;
+  width:100%;
+  font-size: 50px;
+  margin: 0 150px;
+  max-width: 800px;
+  line-height: 150%;
+  font-weight: 100;
+  
+}
+.info h2{
+  position: relative;
+  top:150px;
+  left:0px;
+  width:100%;
+  font-size: 40px;
+  margin: 0 150px;
+  max-width: 800px;
+  line-height: 150%;
+  font-weight: 100;
+  
+}
+
+/*Arrow*/
+@keyframes bounce {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 65px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  color: rgb(255, 255, 255);
+}
+
+.arrow .white-arrow {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.arrow .white-arrow {
+  display: block;
+  background: url("https://image.flaticon.com/icons/svg/25/25415.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+}
+
+.move {
+  animation: bounce 2s linear infinite;
+}
+
+
+
+/*
+App
+*/
+/*List Object*/
+.container {
+  width: 100%;
+  max-width: 500px;
+  font-family: "Plantino", "Times New Roman", Times, Verdana;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(160, 160, 160);
+  height: 76vh;
+  margin-top: 10vh;
+  margin-bottom: 15vh;
+  overflow-y: auto;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 100px;
+  opacity: .85;
+  
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+.done span {
+  text-decoration: line-through;
+  
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  content: '\2713';
+  font-size: 20px;
+  display: none;
+  color: rgb(0, 131, 52);
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.checklist-icon {
+  margin-bottom: 20px;
+}
+
+.empty-state__title, .empty-state__description {
+  margin-bottom: 20px;
+  
+}
+
+.todo-list:empty {
+  display: none;
+  
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
+  
+}
+
+/*Border*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
