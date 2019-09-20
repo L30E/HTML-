@@ -1,7 +1,12 @@
 
-/*
-Main
-*/
+/*Main*/
+
+/*Border*/
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 
 /*Header Section Gradient*/
 .section {
@@ -10,17 +15,13 @@ Main
  padding: 0;
  margin: 0; 
  font-family: "Plantino", "Times New Roman", Times, Verdana;
-
- /*Gradient code*/
- margin: 0;
- width: 100%;
  height: 100vh;
  color: #fff;
  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
  background-size: 400% 400%;
  animation: gradientBG 15s ease infinite;
 }
-/*Gradient Scroll*/
+
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
@@ -37,8 +38,6 @@ Main
 .info h1{
   position: relative;
   top:130px;
-  left:0px;
-  width:100%;
   font-size: 50px;
   margin: 0 150px;
   max-width: 800px;
@@ -49,8 +48,6 @@ Main
 .info h2{
   position: relative;
   top:150px;
-  left:0px;
-  width:100%;
   font-size: 40px;
   margin: 0 150px;
   max-width: 800px;
@@ -79,13 +76,13 @@ Main
   color: rgb(255, 255, 255);
 }
 
-.arrow .white-arrow {
+.arrow .black-arrow {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-.arrow .white-arrow {
+.arrow .black-arrow {
   display: block;
   background: url("https://image.flaticon.com/icons/svg/25/25415.svg");
   background-repeat: no-repeat;
@@ -103,20 +100,39 @@ Main
   animation: bounce 2s linear infinite;
 }
 
-
-
-/*
-App
-*/
 /*List Object*/
+.content {
+ background-color: rgb(83, 78, 78);
+ font-family: "Plantino", "Times New Roman", Times, Verdana;
+ width: 100%;
+ position: relative;
+ padding: 0;
+ margin: 0; 
+ height: 100vh;
+ display:flex; 
+ justify-content: center;
+ justify-content: space-around;
+}
+
+.completed {
+  background-color: rgb(83, 78, 78);
+  font-family: "Plantino", "Times New Roman", Times, Verdana;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0; 
+  height: 100vh;
+  display:flex; 
+  justify-content: center;
+  justify-content: space-around;
+ }
 .container {
   width: 100%;
   max-width: 500px;
-  font-family: "Plantino", "Times New Roman", Times, Verdana;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  color: rgb(160, 160, 160);
+  color: rgb(192, 192, 192);
   height: 76vh;
   margin-top: 10vh;
   margin-bottom: 15vh;
@@ -132,6 +148,11 @@ App
 }
 
 .todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.done-list {
   list-style: none;
   margin-bottom: 20px;
 }
@@ -164,8 +185,8 @@ input[type="checkbox"] {
 .tick {
   width: 30px;
   height: 30px;
-  border: 3px solid #333;
-  border-radius: 50%;
+  border: 3px solid rgb(202, 202, 202);
+  border-radius: 80%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -232,19 +253,35 @@ input[type="text"] {
   
 }
 
-/*Border*/
-
-html {
-  box-sizing: border-box;
+.done-list:empty {
+  display: none;
+  
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
+.done-list:empty + .empty-state {
+  display: flex;
+  
+}
+
+/*Buttons*/ 
+.button {
+  cursor: pointer;
+  background: 0;
+  border: 0;
   padding: 0;
+  color: inherit;
+  
+} 
+
+.button.done{
+  font-size: .75rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
 }
 
-
-
+.button.done:hover {
+  opacity: 0.7;
+}
 
 
