@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- css/js -->
     <link href="style.css" rel="stylesheet" type="text/css">
     <script defer src="jScript.js"></script>
 </head>
 <body>
-<!-- Main  -->
+
     <main>
         <div class="section">
             <div class="info">
@@ -14,42 +13,40 @@
                 <h2> This is my test site.</h2>          
             </div>     
             <div class="arrow center move">
-                <a class="white-arrow" href="#content">Arrow</a>
+                <a class="black-arrow" href="#content"></a>
             </div>  
         </div>
-            
-    <main id=content>
-<!-- start -->
-        <div class="container">
-            <h1 class="app-title">Groceries</h1>
-            <ul class="todo-list js-todo-list"></ul>
-<!-- Initial State -->
-        <div class="empty-state">
-            <h2 class="empty-state__title">Add items below</h2>
-        </div>
- <!-- end -->
+    
+        <div class="content">
+            <div class="container" id="content">
+                <h1 class="app-title" >To Do</h1>
+                <ul class="todo-list js-todo-list"></ul>
+
+            <div class="empty-state">
+                <h2 class="empty-state__title">Add items below</h2>    
+            </div>
+
             <form class="todo-form js-form">
-                <input type="text" aria-label="Enter a new todo item" placeholder="ex: Milk" class="js-todo-input">
+                <input type="text" 
+                aria-label="Enter a new todo item" 
+                placeholder="ex: Buy Milk" 
+                class="js-todo-input">
             </form>
-        </div>
- <!--List -->
- <main id= Lists>
-        <div class ="info"> 
-            <div class = "data-Lists"> 
-                <h>Lists</h> 
+                <a class="button done" href="#saved">See Completed Items</a>
+            </div>
+         </div> 
+
+        <div class = "completed" > 
+            <div class = "container" id="saved">
+                 <h1 class="app-title">Done</h1>
+                 <ul class="done-list js-done-list"></ul>
+
+             <div class="empty-state">
+                <h2 class="empty-state__title">No Items Completed</h2>    
+            </div>
             </div>
         </div>
-        
-        <div> 
-            <form action= "" data-new-list-form>
-                <input type="text" class="new list" aria-label="new list name" palceholder="create new list"> 
-                <button class = "button" aria-label="create new list"></button>
-        </form>
-    </div> 
-
-    </main>
-    </main>
-    </main>
+</main>
 </body>
 </html>
 
